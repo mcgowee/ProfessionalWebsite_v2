@@ -1,0 +1,12 @@
+flask
+flask-cors
+transformers
+torch
+flask-socketio
+python-dotenv
+requests
+azure-cognitiveservices-speech
+eventlet
+openai
+psycopg2-binary
+simple-websocket
