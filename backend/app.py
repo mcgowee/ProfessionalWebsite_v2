@@ -45,6 +45,18 @@ socketio = SocketIO(
 
 SECRET_API_KEY = os.environ.get("FLASK_API_KEY")  # None if not set
 
+@app.errorhandler(Exception)
+def handle_exception(e):
+    import traceback
+    logging.error(f"Unhandled Exception: {str(e)}\n{traceback.format_exc()}")
+    return jsonify({
+        "error": "Internal Server Error (Captured)", 
+        "message": str(e),
+        "trace": traceback.format_exc()
+    }), 500
+
+
+
 
 @app.get("/health")
 def health():
@@ -149,6 +161,7 @@ def analyze_feedback():
 
 
 @app.route("/api/send-email", methods=["POST"])
+@app.route("/api/contact", methods=["POST"])
 def send_email():
     try:
         data = request.get_json()
@@ -232,13 +245,18 @@ def sql_qa_route():
     if not question:
         return jsonify({"error": "Missing question"}), 400
 
-    from sql_qa import sql_qa  # lazy import
-    result = sql_qa(question=question, session_id=session_id, max_rows=max_rows)
+    try:
+        from sql_qa import sql_qa
+        # TEST: Just import to verify
+        # return jsonify({"status": "SQL QA Imported OK"}) 
 
-    if "error" in result:
-        return jsonify(result), 400
-
-    return jsonify(result)
+        result = sql_qa(question=question, session_id=session_id, max_rows=max_rows)
+        if "error" in result:
+             return jsonify(result), 400
+        return jsonify(result)
+    except Exception as e:
+        # Bare bones error handling to avoid crashing the handler
+        return jsonify({"error": f"Crash in SQL QA: {str(e)}"}), 500
 
 
 # ✅ NEW: Register your live translation namespace (ONLY file you have: services/azure_live_ws.py)

@@ -58,9 +58,21 @@ def _get_schema_text(conn: sqlite3.Connection) -> str:
     return "\n".join(parts)
 
 
+
+def log_debug(msg):
+    try:
+        with open("/tmp/sql_debug.log", "a") as f:
+            f.write(msg + "\n")
+    except:
+        pass
+
 def sql_qa(question: str, session_id: str, max_rows: int = MAX_ROWS_DEFAULT) -> Dict[str, Any]:
+    log_debug(f"sql_qa called with question: {question}")
+    
     if not client.api_key:
+        log_debug("ERROR: Missing OPENAI_API_KEY")
         return {"error": "Server is missing OPENAI_API_KEY."}
+
 
     question = (question or "").strip()
     if not question:
@@ -107,7 +119,8 @@ def sql_qa(question: str, session_id: str, max_rows: int = MAX_ROWS_DEFAULT) -> 
         content_stripped = re.sub(r"^```(?:json)?\s*|\s*```$", "", content.strip(), flags=re.IGNORECASE)
         try:
             payload = json.loads(content_stripped)
-        except Exception:
+        except Exception as e:
+            log_debug(f"JSON Parse Error: {e}, Content: {content}")
             return {"error": "Model did not return valid JSON.", "raw": content}
 
         sql = (payload.get("sql") or "").strip()

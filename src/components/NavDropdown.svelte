@@ -1,23 +1,11 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
 
+	export let label = 'Menu';
+	export let items: { href: string; label: string; desc?: string }[] = [];
+
 	let open = false;
 	let rootEl: HTMLDivElement | null = null;
-
-	type DemoItem = {
-		href: string;
-		label: string;
-		desc?: string;
-	};
-
-	const demos: DemoItem[] = [
-		{ href: '/chat', label: 'Basic Chat', desc: 'Simple Svelte+Flask prototype' },
-		{ href: '/chat3', label: 'Old Translator', desc: 'Previous translation demo' },
-		{ href: '/chat4', label: 'SQL Demo', desc: 'Early SQL chatbot prototype' },
-		{ href: '/chatapp', label: 'Legacy General Chat', desc: 'Original Llama3 Chatbot' },
-		{ href: '/wordle', label: 'Wordle Solver', desc: 'Constraint solving + scoring heuristics' }
-	];
-
 	const isBrowser = typeof window !== 'undefined' && typeof document !== 'undefined';
 
 	function toggle() {
@@ -59,26 +47,19 @@
 		aria-expanded={open}
 		on:click|stopPropagation={toggle}
 	>
-		Legacy <span class="chev" aria-hidden="true">▾</span>
+		{label} <span class="chev" aria-hidden="true">▾</span>
 	</button>
 
 	{#if open}
-		<div class="dropdown" role="menu" aria-label="Demos">
-			{#each demos as d}
-				<a class="item" href={d.href} role="menuitem" on:click={close}>
-					<div class="item__label">{d.label}</div>
-					{#if d.desc}
-						<div class="item__desc">{d.desc}</div>
+		<div class="dropdown" role="menu" aria-label={label}>
+			{#each items as item}
+				<a class="item" href={item.href} role="menuitem" on:click={close}>
+					<div class="item__label">{item.label}</div>
+					{#if item.desc}
+						<div class="item__desc">{item.desc}</div>
 					{/if}
 				</a>
 			{/each}
-
-			<div class="divider"></div>
-
-			<a class="item item--sub" href="/projects/sql-agent" role="menuitem" on:click={close}>
-				<div class="item__label">Featured Project: SQL Agent</div>
-				<div class="item__desc">Case study + architecture + guardrails</div>
-			</a>
 		</div>
 	{/if}
 </div>
@@ -154,19 +135,5 @@
 		font-size: 12px;
 		color: var(--muted);
 		line-height: 1.35;
-	}
-
-	.divider {
-		height: 1px;
-		background: rgba(0, 0, 0, 0.08);
-		margin: 6px 0;
-	}
-
-	.item--sub {
-		background: rgba(255, 79, 163, 0.06);
-	}
-
-	.item--sub:hover {
-		background: rgba(255, 79, 163, 0.1);
 	}
 </style>
