@@ -20,19 +20,19 @@
 	}
 
 	const socials = [
-		{ href: 'https://twitter.com/your-twitter-handle', label: 'Twitter' },
-		{ href: 'https://www.facebook.com/earlmcgowen/', label: 'Facebook' },
 		{ href: 'https://www.linkedin.com/in/earl-l-mcgowen-b510884/', label: 'LinkedIn' },
-		{ href: 'https://www.youtube.com/channel/UC-y8DJUix0fjtnLSe5_8bnA', label: 'YouTube' }
+		{ href: 'https://github.com/mcgowee', label: 'GitHub' },
+		{ href: 'https://huggingface.co/mcgowee', label: 'Hugging Face' },
+		{ href: 'https://civitai.com/user/mcgowee', label: 'Civitai' },
+		{ href: 'https://www.youtube.com/channel/UC-y8DJUix0fjtnLSe5_8bnA', label: 'YouTube' },
+		{ href: 'https://www.facebook.com/earlmcgowen/', label: 'Facebook' },
+		{ href: 'http://www.earlmcgowen.info/', label: 'Legacy Site (2008)' }
 	];
 
 	const nav = [
 		{ href: '/', label: 'Home' },
 		{ href: '/chat2', label: 'SQL Chat' },
-		{ href: '/azure-translator', label: 'Translator' },
-		{ href: '/projects', label: 'Projects' },
-		{ href: '/about', label: 'About' },
-		{ href: '/contact', label: 'Contact' }
+		{ href: '/azure-translator', label: 'Translator' }
 	];
 
 	const appItems = [
@@ -50,7 +50,7 @@
 <header class="header">
 	<div class="brand">
 		<a class="brandLink" href="/" aria-label="Home">
-			<img class="logo" src="/logo.jpg" alt="SakuraAI logo" />
+			<img class="logo" src="/logo.png?v=2" alt="SakuraAI logo" />
 		</a>
 
 		<div class="titleBlock">
@@ -91,6 +91,24 @@
 		{/each}
 
 		<li class="navItem">
+			<NavDropdown
+				label="Projects"
+				items={[
+					{
+						href: '/projects/capstone',
+						label: 'Capstone',
+						desc: 'Mental Health No-Show Analytics'
+					},
+					{
+						href: '/projects/legacy-site',
+						label: 'Legacy Site',
+						desc: 'Archive of 2008 Joomla Site'
+					}
+				]}
+			/>
+		</li>
+
+		<li class="navItem">
 			<NavDropdown label="Apps" items={appItems} />
 		</li>
 
@@ -98,7 +116,12 @@
 			<NavDropdown label="Legacy" items={legacyItems} />
 		</li>
 
-		<slot />
+		<li class="navItem">
+			<a class="navLink" href="/about">About</a>
+		</li>
+		<li class="navItem">
+			<a class="navLink" href="/contact">Contact</a>
+		</li>
 	</ul>
 </nav>
 

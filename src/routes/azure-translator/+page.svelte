@@ -334,7 +334,59 @@
 </script>
 
 <div class="wrap">
+	<img
+		src="/assets/translator_hero.png?v=2"
+		alt="Visualizing speech to translation"
+		class="hero-img"
+		style="width: 100%; max-width: 800px; height: auto; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); margin-bottom: 2rem;"
+	/>
 	<h1>Azure Live Translator</h1>
+
+	<div
+		class="info-block"
+		style="margin-top: 0; margin-bottom: 2rem; border-top: none; padding-top: 0;"
+	>
+		<div class="info-grid">
+			<div class="info-card">
+				<h4>🎧 Audio Modes</h4>
+				<ul>
+					<li><strong>Mic:</strong> Standard microphone input for your voice.</li>
+					<li>
+						<strong>System Audio:</strong> Captures audio from your computer (Tabs, Windows, or Screen).
+					</li>
+					<li>
+						<strong>Use Case:</strong> Select "System Audio" to transcribe/translate live meetings
+						from
+						<strong>Teams</strong>, <strong>Zoom</strong>, or <strong>YouTube</strong> videos directly
+						into the AI.
+					</li>
+				</ul>
+			</div>
+			<div class="info-card">
+				<h4>🤖 Architecture & AI</h4>
+				<p>
+					Audio is streamed via <strong>WebSockets</strong> to a <strong>Flask</strong> backend,
+					processed by
+					<strong>Azure Cognitive Services</strong>, and can be piped to <strong>LLMs</strong> for:
+				</p>
+				<ul>
+					<li>Sentiment/Emotion Detection</li>
+					<li>Summarization & Insights</li>
+				</ul>
+			</div>
+			<div class="info-card warn-card">
+				<h4>⚠️ Troubleshooting</h4>
+				<ul>
+					<li><strong>Browser:</strong> Use Chrome or Edge for best "System Audio" support.</li>
+					<li>
+						<strong>Permissions:</strong> specific tabs often work better than "Entire Screen" for audio
+						sharing.
+					</li>
+					<li><strong>Silence?</strong> Check if you ticked "Share tab audio" in the popup.</li>
+				</ul>
+			</div>
+		</div>
+	</div>
 
 	<div class="row">
 		<label
@@ -532,5 +584,46 @@
 	.muted {
 		font-size: 0.9rem;
 		color: #6b7280;
+	}
+
+	/* New Info Section Styles */
+	.info-block {
+		margin-top: 2.5rem;
+		padding-top: 1.5rem;
+		border-top: 1px solid #e5e7eb;
+	}
+
+	.info-grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+		gap: 1rem;
+	}
+	.info-card {
+		background: #f9fafb;
+		border: 1px solid #e5e7eb;
+		border-radius: 10px;
+		padding: 1rem;
+	}
+	.info-card h4 {
+		margin: 0 0 0.5rem;
+		font-size: 1rem;
+		color: #111827;
+	}
+	.info-card p,
+	.info-card li {
+		color: #4b5563;
+		font-size: 0.95rem;
+		line-height: 1.5;
+	}
+	.info-card ul {
+		margin: 0;
+		padding-left: 1.25rem;
+	}
+	.warn-card {
+		background: #fff7ed;
+		border-color: #fed7aa;
+	}
+	.warn-card h4 {
+		color: #9a3412;
 	}
 </style>

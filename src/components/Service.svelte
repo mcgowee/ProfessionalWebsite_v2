@@ -1,149 +1,152 @@
 <script lang="ts">
-  import ServiceCard from './ServiceCard.svelte';
-  import SectionWrapper from './SectionWrapper.svelte';
+	import ServiceCard from './ServiceCard.svelte';
+	import SectionWrapper from './SectionWrapper.svelte';
 
-  type ServiceFeature = {
-    featureList: string[];
-    description: string;
-    imgUrl: string;
-  };
+	type ServiceFeature = {
+		featureList: string[];
+		description: string;
+		// We'll store the "highlight text" here to avoid index-based logic in the template
+		highlight: string;
+		imgUrl: string;
+	};
 
-  const serviceFeatures: ServiceFeature[] = [
-    {
-      featureList: [
-        'Combining retrieval-based methods with generative models to improve the accuracy and relevance of generated responses.'
-      ],
-      description:
-        'Utilize Retrieval-Augmented Generation (RAG) to enhance the precision and applicability of generated responses by integrating retrieval-based methods with generative models.',
-      imgUrl: '/assets/rag-diagram.png'
-    },
-    {
-      featureList: [
-        'Developing autonomous agents that can perceive their environment, make decisions, and take actions to achieve specific goals.'
-      ],
-      description:
-        'Create Intelligent Agents that can autonomously perceive their environment, make informed decisions, and take actions to accomplish defined objectives.',
-      imgUrl: '/assets/intelligent-agents-robot.png'
-    },
-    {
-      featureList: [
-        'Integrating SQL queries with machine learning models to automate data processing and analysis workflows.'
-      ],
-      description:
-        'Streamline your data workflows by integrating SQL queries with machine learning models through SQL Chaining.',
-      imgUrl: '/assets/sql-chaining.png'
-    },
-    {
-      featureList: [
-        'Designing, training, and deploying machine learning models for predictive analytics, classification, clustering, and regression tasks.'
-      ],
-      description:
-        'Harness the power of Machine Learning (ML) by designing, training, and deploying models for predictive analytics, classification, clustering, and regression tasks.',
-      imgUrl: '/assets/machine-learning-model.png'
-    },
-    {
-      featureList: ['Developing and deploying deep neural networks for complex tasks.'],
-      description:
-        'Implement Deep Learning techniques by developing and deploying deep neural networks to solve complex tasks.',
-      imgUrl: '/assets/deep-learning-network.png'
-    },
-    {
-      featureList: [
-        'Assessing the performance of machine learning models using metrics like accuracy, precision, recall, F1 score, and ROC-AUC.'
-      ],
-      description:
-        'Ensure the reliability of your models with Model Evaluation and Validation, using metrics such as accuracy, precision, recall, F1 score, and ROC-AUC.',
-      imgUrl: '/assets/model-evaluation-metrics.png'
-    },
-    {
-      featureList: [
-        'Analyzing and forecasting time-dependent data using AI models to identify trends, seasonality, and anomalies.'
-      ],
-      description:
-        'Leverage Time Series Analysis to analyze and forecast time-dependent data, identifying trends, seasonality, and anomalies with AI models.',
-      imgUrl: '/time-series-analysis.jpg'
-    }
-  ];
+	const serviceFeatures: ServiceFeature[] = [
+		{
+			featureList: [
+				'Strategic roadmaps for AI adoption in regulated industries (Healthcare, Finance).',
+				'HIPAA-compliant governance frameworks and ethical AI policies.',
+				'Vendor evaluation and executive pilot management.'
+			],
+			description:
+				'Navigate the complexities of enterprise AI with a proven leader in governance and implementation.',
+			highlight: 'Establish robust <span class="emph">AI Governance & Strategy</span>',
+			imgUrl: '/assets/service_0.jpg'
+		},
+		{
+			featureList: [
+				'Custom RAG (Retrieval-Augmented Generation) pipelines for internal knowledge bases.',
+				'Agentic SQL chatbots that query your database in plain English.',
+				'Fine-tuning LLMs for specific domain terminologies.'
+			],
+			description:
+				'Transform your business data into conversational insights using state-of-the-art Generative AI.',
+			highlight: 'deploy custom <span class="emph">Generative AI Solutions</span>',
+			imgUrl: '/assets/service_2.jpg'
+		},
+		{
+			featureList: [
+				'SQL Server Architecture (2008–2022) and Migration strategies.',
+				'High-performance ETL pipelines (SSIS + Python integration).',
+				'Data Warehouse design for large-scale analytics (Star/Snowflake schemas).'
+			],
+			description:
+				'Build a solid data foundation with over 15 years of expert database engineering.',
+			highlight: 'Optimize <span class="emph">Enterprise Data Warehousing</span>',
+			imgUrl: '/assets/service_1.jpg'
+		},
+		{
+			featureList: [
+				'No-show prediction and behavioral health analytics (Capstone Project).',
+				'Classification, Regression, and Clustering models using Scikit-Learn/XGBoost.',
+				'Actionable insights from unstructured text via NLP.'
+			],
+			description: 'Turn historical data into future foresight with rigorous predictive modeling.',
+			highlight: 'Drive decisions with <span class="emph">Predictive Analytics</span>',
+			imgUrl: '/assets/service_4.jpg'
+		},
+		{
+			featureList: [
+				'On-prem NVIDIA GPU server architecture for secure AI workloads.',
+				'TensorRT optimization for low-latency inference.',
+				'Secure API gateways for internal model deployment.'
+			],
+			description:
+				'Deploy AI securely with specialized infrastructure designed for privacy and performance.',
+			highlight: 'Architect <span class="emph">Secure AI Infrastructure</span>',
+			imgUrl: '/assets/service_3.jpg'
+		},
+		{
+			featureList: [
+				'Automated document review systems for legal discovery.',
+				'Privacy audits and compliance reporting tools.',
+				'Interdisciplinary bridge between Legal counsel and Technical teams.'
+			],
+			description:
+				'Leverage unique dual-expertise in Law (J.D.) and Technology to solve compliance challenges.',
+			highlight: 'Innovate with <span class="emph">Legal Technology & Compliance</span>',
+			imgUrl: '/assets/service_5.jpg'
+		}
+	];
 </script>
 
 <SectionWrapper id="services">
-  <div class="services">
-    <header class="header">
-      <p class="kicker">
-        Empowering Your Business with <span class="brand">AI, SQL, and Data Analytics</span> Expertise
-      </p>
-      <h3 class="title">Professional Services</h3>
-    </header>
+	<div class="services">
+		<header class="header">
+			<p class="kicker">
+				Empowering Your Business with <span class="brand">AI, SQL, and Legal Tech</span> Expertise
+			</p>
+			<h3 class="title">Professional Services</h3>
+		</header>
 
-    <div class="cards">
-      {#each serviceFeatures as serviceFeature, index}
-        <ServiceCard {serviceFeature} {index}>
-          {#if index === 0}
-            Enhance your data processes with <span class="emph">Retrieval-Augmented Generation (RAG)</span>
-          {:else if index === 1}
-            Develop autonomous systems using <span class="emph">Intelligent Agents</span>
-          {:else if index === 2}
-            Streamline workflows with <span class="emph">SQL Chaining</span>
-          {:else if index === 3}
-            Leverage predictive power with <span class="emph">Machine Learning (ML)</span>
-          {:else if index === 4}
-            Solve complex tasks with <span class="emph">Deep Learning</span>
-          {:else if index === 5}
-            Ensure model reliability through <span class="emph">Model Evaluation and Validation</span>
-          {:else}
-            Forecast data trends with <span class="emph">Time Series Analysis</span>
-          {/if}
-        </ServiceCard>
-      {/each}
-    </div>
-  </div>
+		<div class="cards">
+			{#each serviceFeatures as serviceFeature, index}
+				<ServiceCard {serviceFeature} {index}>
+					<!-- Render HTML safely since we use <span> classes in the string -->
+					{@html serviceFeature.highlight}
+				</ServiceCard>
+			{/each}
+		</div>
+	</div>
 </SectionWrapper>
 
 <style>
-  .services {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 26px;
-    padding: 18px 0 28px;
-  }
+	.services {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		gap: 26px;
+		padding: 18px 0 28px;
+	}
 
-  .header {
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-  }
+	.header {
+		text-align: center;
+		display: flex;
+		flex-direction: column;
+		gap: 10px;
+	}
 
-  .kicker {
-    margin: 0;
-    color: var(--muted);
-    font-size: 16px;
-    line-height: 1.5;
-  }
+	.kicker {
+		margin: 0;
+		color: var(--muted);
+		font-size: 16px;
+		line-height: 1.5;
+	}
 
-  .brand {
-    color: var(--brand);
-    font-weight: 700;
-  }
+	.brand {
+		color: var(--brand);
+		font-weight: 700;
+	}
 
-  .title {
-    margin: 0;
-    font-weight: 800;
-    letter-spacing: -0.02em;
-    line-height: 1.1;
-    font-size: clamp(34px, 4.2vw, 56px);
-  }
+	.title {
+		margin: 0;
+		font-weight: 800;
+		letter-spacing: -0.02em;
+		line-height: 1.1;
+		font-size: clamp(34px, 4.2vw, 56px);
+	}
 
-  .emph {
-    color: var(--brand);
-    font-weight: 650;
-  }
+	/* Make sure .emph is globally available or passed down. 
+     Since we use @html, the style needs to be global or accessible. 
+     Svelte scoped styles won't apply to @html content unless we use :global() */
+	:global(.emph) {
+		color: var(--brand);
+		font-weight: 650;
+	}
 
-  .cards {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    gap: 18px;
-  }
+	.cards {
+		width: 100%;
+		display: flex;
+		flex-direction: column;
+		gap: 18px;
+	}
 </style>

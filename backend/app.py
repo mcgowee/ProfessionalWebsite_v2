@@ -79,6 +79,7 @@ def require_api_key():
 
 # ---- Wordle Code (Unchanged) ---- #
 @app.route("/api/solve", methods=["POST"])
+@app.route("/api/wordle/solve", methods=["POST"])
 def solve():
     """
     Wordle Solver endpoint: processes guesses and feedback to suggest words.
