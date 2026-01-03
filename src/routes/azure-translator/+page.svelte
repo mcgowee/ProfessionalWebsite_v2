@@ -1,8 +1,6 @@
 <script lang="ts">
 	import { onDestroy } from 'svelte';
 
-	export const ssr = false;
-
 	let srcLang = 'es';
 	let tgtLang = 'en';
 
@@ -86,10 +84,12 @@
 		socket.off('auto_detect_updated');
 
 		socket.on('partial_result', (m: any) => {
+			// console.log('[azure-live] partial:', m);
 			partialTranscript = (m?.text ?? '').trim();
 		});
 
 		socket.on('final_result', (m: any) => {
+			console.log('[azure-live] FINAL RECEIVED:', m);
 			const txt = (m?.text ?? '').trim();
 			if (!txt) return;
 			finalTranscript += (finalTranscript ? '\n' : '') + txt;
@@ -97,6 +97,7 @@
 		});
 
 		socket.on('final_translation', (m: any) => {
+			console.log('[azure-live] TRANSLATION RECEIVED:', m);
 			const txt = (m?.translation ?? '').trim();
 			if (!txt) return;
 			translation += (translation ? '\n' : '') + txt;
@@ -227,7 +228,7 @@
 
 		const ac = new AudioContext({ sampleRate: 16000 });
 		try {
-			await ac.audioWorklet.addModule('/pcm16-worklet.js?v=1');
+			await ac.audioWorklet.addModule('/pcm16-worklet.js?v=2');
 		} catch (err) {
 			console.error('[startLive] Worklet failed to load', err);
 			isBusy = false;
@@ -250,6 +251,12 @@
 			// console.log('[azure-live] worklet message');
 			if (!isLive) return;
 			const data: any = (ev as any).data || {};
+
+			if (data.log) {
+				console.log('[azure-live-worklet]', data.log);
+				return;
+			}
+
 			const pcm = data.pcm;
 			if (!pcm) return;
 			socket.emit('audio_chunk', {

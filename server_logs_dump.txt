@@ -1,0 +1,200 @@
+Jan 01 14:30:41 srv674751 gunicorn[48922]: [azure-live] connected IOFO95_rhNu0Ak6UAAAD auto=True
+Jan 01 14:30:41 srv674751 gunicorn[48922]: [azure-live] start_stream IOFO95_rhNu0Ak6UAAAD data={'src_lang': 'es', 'tgt_lang': 'en', 'auto_detect': True}
+Jan 01 14:30:41 srv674751 gunicorn[48922]: [azure-live] keys present? key=yes region=yes
+Jan 01 14:30:41 srv674751 gunicorn[48922]: [azure-live] initializing recognizer for IOFO95_rhNu0Ak6UAAAD region=eastus
+Jan 01 14:30:41 srv674751 gunicorn[48922]: [azure-live] starting continuous recognition async...
+Jan 01 14:30:41 srv674751 gunicorn[48922]: [azure-live] started recognition successfully
+Jan 01 14:30:41 srv674751 gunicorn[48922]: [azure-live] SESSION STARTED SessionEventArgs(session_id=ef3bcaf7dca249faa04f5605420a49f8)
+Jan 01 14:30:41 srv674751 gunicorn[48922]: [azure-live] SESSION STOPPED SessionEventArgs(session_id=ef3bcaf7dca249faa04f5605420a49f8)
+Jan 01 14:30:41 srv674751 gunicorn[48922]: [azure-live] audio_chunk IOFO95_rhNu0Ak6UAAAD len=256 max_byte=255
+Jan 01 14:30:41 srv674751 gunicorn[48922]: [azure-live] audio_chunk IOFO95_rhNu0Ak6UAAAD len=256 max_byte=255
+Jan 01 14:30:41 srv674751 gunicorn[48922]: [azure-live] audio_chunk IOFO95_rhNu0Ak6UAAAD len=256 max_byte=255
+Jan 01 14:30:41 srv674751 gunicorn[48922]: [azure-live] audio_chunk IOFO95_rhNu0Ak6UAAAD len=256 max_byte=255
+Jan 01 14:30:41 srv674751 gunicorn[48922]: [azure-live] audio_chunk IOFO95_rhNu0Ak6UAAAD len=256 max_byte=255
+Jan 01 14:30:41 srv674751 gunicorn[48922]: [azure-live] audio_chunk IOFO95_rhNu0Ak6UAAAD len=256 max_byte=255
+Jan 01 14:30:41 srv674751 gunicorn[48922]: [azure-live] audio_chunk IOFO95_rhNu0Ak6UAAAD len=256 max_byte=255
+Jan 01 14:30:41 srv674751 gunicorn[48922]: [azure-live] audio_chunk IOFO95_rhNu0Ak6UAAAD len=256 max_byte=255
+Jan 01 14:30:41 srv674751 gunicorn[48922]: [azure-live] audio_chunk IOFO95_rhNu0Ak6UAAAD len=256 max_byte=255
+Jan 01 14:30:41 srv674751 gunicorn[48922]: [azure-live] audio_chunk IOFO95_rhNu0Ak6UAAAD len=256 max_byte=255
+Jan 01 14:30:41 srv674751 gunicorn[48922]: [azure-live] audio_chunk IOFO95_rhNu0Ak6UAAAD len=256 max_byte=255
+Jan 01 14:30:41 srv674751 gunicorn[48922]: [azure-live] audio_chunk IOFO95_rhNu0Ak6UAAAD len=256 max_byte=255
+Jan 01 14:30:41 srv674751 gunicorn[48922]: [azure-live] audio_chunk IOFO95_rhNu0Ak6UAAAD len=256 max_byte=255
+Jan 01 14:30:41 srv674751 gunicorn[48922]: [azure-live] audio_chunk IOFO95_rhNu0Ak6UAAAD len=256 max_byte=255
+Jan 01 14:30:41 srv674751 gunicorn[48922]: [azure-live] end_of_stream IOFO95_rhNu0Ak6UAAAD
+Jan 01 14:30:41 srv674751 gunicorn[48922]: [azure-live] end_of_stream IOFO95_rhNu0Ak6UAAAD
+Jan 01 14:30:41 srv674751 gunicorn[48922]: [azure-live] disconnected IOFO95_rhNu0Ak6UAAAD
+Jan 01 14:30:41 srv674751 gunicorn[48922]: [azure-live] connected pP1ICxfzvxer4qPsAAAF auto=True
+Jan 01 14:30:41 srv674751 gunicorn[48922]: [azure-live] start_stream pP1ICxfzvxer4qPsAAAF data={'src_lang': 'es', 'tgt_lang': 'en', 'auto_detect': True}
+Jan 01 14:30:41 srv674751 gunicorn[48922]: [azure-live] keys present? key=yes region=yes
+Jan 01 14:30:41 srv674751 gunicorn[48922]: [azure-live] initializing recognizer for pP1ICxfzvxer4qPsAAAF region=eastus
+Jan 01 14:30:41 srv674751 gunicorn[48922]: [azure-live] starting continuous recognition async...
+Jan 01 14:30:41 srv674751 gunicorn[48922]: [azure-live] SESSION STARTED SessionEventArgs(session_id=e8efde3c43d447b28b6d229a51546654)
+Jan 01 14:30:41 srv674751 gunicorn[48922]: [azure-live] started recognition successfully
+Jan 01 14:30:41 srv674751 gunicorn[48922]: [azure-live] SESSION STOPPED SessionEventArgs(session_id=e8efde3c43d447b28b6d229a51546654)
+Jan 01 14:30:41 srv674751 gunicorn[48922]: [azure-live] audio_chunk pP1ICxfzvxer4qPsAAAF len=256 max_byte=255
+Jan 01 14:30:41 srv674751 gunicorn[48922]: [azure-live] audio_chunk pP1ICxfzvxer4qPsAAAF len=256 max_byte=255
+Jan 01 14:30:41 srv674751 gunicorn[48922]: [azure-live] audio_chunk pP1ICxfzvxer4qPsAAAF len=256 max_byte=255
+Jan 01 14:30:41 srv674751 gunicorn[48922]: [azure-live] audio_chunk pP1ICxfzvxer4qPsAAAF len=256 max_byte=255
+Jan 01 14:30:41 srv674751 gunicorn[48922]: [azure-live] initializing recognizer for pP1ICxfzvxer4qPsAAAF region=eastus
+Jan 01 14:30:41 srv674751 gunicorn[48922]: [azure-live] starting continuous recognition async...
+Jan 01 14:30:41 srv674751 gunicorn[48922]: [azure-live] SESSION STARTED SessionEventArgs(session_id=36d6bd2bdfcb49248f5170e0230b5b81)
+Jan 01 14:30:41 srv674751 gunicorn[48922]: [azure-live] started recognition successfully
+Jan 01 14:30:41 srv674751 gunicorn[48922]: [azure-live] audio_chunk pP1ICxfzvxer4qPsAAAF len=256 max_byte=255
+Jan 01 14:30:41 srv674751 gunicorn[48922]: [azure-live] audio_chunk pP1ICxfzvxer4qPsAAAF len=256 max_byte=255
+Jan 01 14:30:41 srv674751 gunicorn[48922]: [azure-live] partial from Azure: hello
+Jan 01 14:30:41 srv674751 gunicorn[48922]: [azure-live] audio_chunk pP1ICxfzvxer4qPsAAAF len=256 max_byte=255
+Jan 01 14:30:41 srv674751 gunicorn[48922]: [azure-live] audio_chunk pP1ICxfzvxer4qPsAAAF len=256 max_byte=255
+Jan 01 14:30:41 srv674751 gunicorn[48922]: [azure-live] audio_chunk pP1ICxfzvxer4qPsAAAF len=256 max_byte=255
+Jan 01 14:30:41 srv674751 gunicorn[48922]: [azure-live] partial from Azure: hello can you
+Jan 01 14:30:41 srv674751 gunicorn[48922]: [azure-live] partial from Azure: hello can you hear me
+Jan 01 14:30:41 srv674751 gunicorn[48922]: [azure-live] audio_chunk pP1ICxfzvxer4qPsAAAF len=256 max_byte=255
+Jan 01 14:30:41 srv674751 gunicorn[48922]: [azure-live] FINAL from Azure: Hello, can you hear me?
+Jan 01 14:30:41 srv674751 gunicorn[48922]: [azure-live] translate error: 404 Client Error: Resource Not Found for url: https://translateelm.cognitiveservices.azure.com/translate?api-version=3.0&to=es&from=en
+Jan 01 14:30:41 srv674751 gunicorn[48922]: [azure-live] audio_chunk pP1ICxfzvxer4qPsAAAF len=256 max_byte=255
+Jan 01 14:30:41 srv674751 gunicorn[48922]: [azure-live] audio_chunk pP1ICxfzvxer4qPsAAAF len=256 max_byte=255
+Jan 01 14:30:41 srv674751 gunicorn[48922]: [azure-live] audio_chunk pP1ICxfzvxer4qPsAAAF len=256 max_byte=255
+Jan 01 14:30:41 srv674751 gunicorn[48922]: [azure-live] audio_chunk pP1ICxfzvxer4qPsAAAF len=256 max_byte=255
+Jan 01 14:30:41 srv674751 gunicorn[48922]: [azure-live] audio_chunk pP1ICxfzvxer4qPsAAAF len=256 max_byte=255
+Jan 01 14:30:41 srv674751 gunicorn[48922]: [azure-live] partial from Azure: hello
+Jan 01 14:30:41 srv674751 gunicorn[48922]: [azure-live] audio_chunk pP1ICxfzvxer4qPsAAAF len=256 max_byte=255
+Jan 01 14:30:41 srv674751 gunicorn[48922]: [azure-live] audio_chunk pP1ICxfzvxer4qPsAAAF len=256 max_byte=255
+Jan 01 14:30:41 srv674751 gunicorn[48922]: [azure-live] FINAL from Azure: Hello.
+Jan 01 14:30:41 srv674751 gunicorn[48922]: [azure-live] translate error: 404 Client Error: Resource Not Found for url: https://translateelm.cognitiveservices.azure.com/translate?api-version=3.0&to=es&from=en
+Jan 01 14:30:41 srv674751 gunicorn[48922]: [azure-live] audio_chunk pP1ICxfzvxer4qPsAAAF len=256 max_byte=255
+Jan 01 14:30:41 srv674751 gunicorn[48922]: [azure-live] audio_chunk pP1ICxfzvxer4qPsAAAF len=256 max_byte=255
+Jan 01 14:30:41 srv674751 gunicorn[48922]: [azure-live] audio_chunk pP1ICxfzvxer4qPsAAAF len=256 max_byte=255
+Jan 01 14:30:41 srv674751 gunicorn[48922]: [azure-live] audio_chunk pP1ICxfzvxer4qPsAAAF len=256 max_byte=255
+Jan 01 14:30:41 srv674751 gunicorn[48922]: [azure-live] audio_chunk pP1ICxfzvxer4qPsAAAF len=256 max_byte=255
+Jan 01 14:30:41 srv674751 gunicorn[48922]: [azure-live] audio_chunk pP1ICxfzvxer4qPsAAAF len=256 max_byte=255
+Jan 01 14:30:41 srv674751 gunicorn[48922]: [azure-live] audio_chunk pP1ICxfzvxer4qPsAAAF len=256 max_byte=255
+Jan 01 14:30:41 srv674751 gunicorn[48922]: [azure-live] audio_chunk pP1ICxfzvxer4qPsAAAF len=256 max_byte=255
+Jan 01 14:30:41 srv674751 gunicorn[48922]: [azure-live] audio_chunk pP1ICxfzvxer4qPsAAAF len=256 max_byte=255
+Jan 01 14:30:41 srv674751 gunicorn[48922]: [azure-live] audio_chunk pP1ICxfzvxer4qPsAAAF len=256 max_byte=255
+Jan 01 14:30:41 srv674751 gunicorn[48922]: [azure-live] partial from Azure: hello
+Jan 01 14:30:41 srv674751 gunicorn[48922]: [azure-live] audio_chunk pP1ICxfzvxer4qPsAAAF len=256 max_byte=255
+Jan 01 14:30:41 srv674751 gunicorn[48922]: [azure-live] audio_chunk pP1ICxfzvxer4qPsAAAF len=256 max_byte=255
+Jan 01 14:30:41 srv674751 gunicorn[48922]: [azure-live] FINAL from Azure: Hello.
+Jan 01 14:30:41 srv674751 gunicorn[48922]: [azure-live] audio_chunk pP1ICxfzvxer4qPsAAAF len=256 max_byte=255
+Jan 01 14:30:41 srv674751 gunicorn[48922]: [azure-live] translate error: 404 Client Error: Resource Not Found for url: https://translateelm.cognitiveservices.azure.com/translate?api-version=3.0&to=es&from=en
+Jan 01 14:30:41 srv674751 gunicorn[48922]: [azure-live] audio_chunk pP1ICxfzvxer4qPsAAAF len=256 max_byte=255
+Jan 01 14:30:41 srv674751 gunicorn[48922]: [azure-live] audio_chunk pP1ICxfzvxer4qPsAAAF len=256 max_byte=255
+Jan 01 14:30:41 srv674751 gunicorn[48922]: [azure-live] audio_chunk pP1ICxfzvxer4qPsAAAF len=256 max_byte=255
+Jan 01 14:30:41 srv674751 gunicorn[48922]: [azure-live] audio_chunk pP1ICxfzvxer4qPsAAAF len=256 max_byte=255
+Jan 01 14:30:41 srv674751 gunicorn[48922]: [azure-live] partial from Azure: uh something's
+Jan 01 14:30:41 srv674751 gunicorn[48922]: [azure-live] partial from Azure: uh something's better
+Jan 01 14:30:41 srv674751 gunicorn[48922]: [azure-live] FINAL from Azure: Something's better.
+Jan 01 14:30:41 srv674751 gunicorn[48922]: [azure-live] audio_chunk pP1ICxfzvxer4qPsAAAF len=256 max_byte=255
+Jan 01 14:30:41 srv674751 gunicorn[48922]: [azure-live] translate error: 404 Client Error: Resource Not Found for url: https://translateelm.cognitiveservices.azure.com/translate?api-version=3.0&to=es&from=en
+Jan 01 14:30:41 srv674751 gunicorn[48922]: [azure-live] audio_chunk pP1ICxfzvxer4qPsAAAF len=256 max_byte=255
+Jan 01 14:30:41 srv674751 gunicorn[48922]: [azure-live] partial from Azure: hello
+Jan 01 14:30:41 srv674751 gunicorn[48922]: [azure-live] FINAL from Azure: Hello.
+Jan 01 14:30:41 srv674751 gunicorn[48922]: [azure-live] audio_chunk pP1ICxfzvxer4qPsAAAF len=256 max_byte=255
+Jan 01 14:30:41 srv674751 gunicorn[48922]: [azure-live] audio_chunk pP1ICxfzvxer4qPsAAAF len=256 max_byte=255
+Jan 01 14:30:41 srv674751 gunicorn[48922]: [azure-live] audio_chunk pP1ICxfzvxer4qPsAAAF len=256 max_byte=255
+Jan 01 14:30:41 srv674751 gunicorn[48922]: [azure-live] translate error: 404 Client Error: Resource Not Found for url: https://translateelm.cognitiveservices.azure.com/translate?api-version=3.0&to=es&from=en
+Jan 01 14:30:41 srv674751 gunicorn[48922]: [azure-live] audio_chunk pP1ICxfzvxer4qPsAAAF len=256 max_byte=255
+Jan 01 14:30:41 srv674751 gunicorn[48922]: [azure-live] audio_chunk pP1ICxfzvxer4qPsAAAF len=256 max_byte=255
+Jan 01 14:30:41 srv674751 gunicorn[48922]: [azure-live] audio_chunk pP1ICxfzvxer4qPsAAAF len=256 max_byte=255
+Jan 01 14:30:41 srv674751 gunicorn[48922]: [azure-live] audio_chunk pP1ICxfzvxer4qPsAAAF len=256 max_byte=255
+Jan 01 14:30:41 srv674751 gunicorn[48922]: [azure-live] audio_chunk pP1ICxfzvxer4qPsAAAF len=256 max_byte=255
+Jan 01 14:30:41 srv674751 gunicorn[48922]: [azure-live] audio_chunk pP1ICxfzvxer4qPsAAAF len=256 max_byte=255
+Jan 01 14:30:41 srv674751 gunicorn[48922]: [azure-live] partial from Azure: ah man
+Jan 01 14:31:06 srv674751 gunicorn[48922]: server=earl-mcgowen.com//socket.io/ client=127.0.0.1:50362 socket shutdown error: [Errno 9] Bad file descriptor[2026-01-01 14:31:06 +0000] [48922] [ERROR] Error handling request /socket.io/?EIO=4&transport=websocket
+Jan 01 14:31:06 srv674751 gunicorn[48922]: Traceback (most recent call last):
+Jan 01 14:31:06 srv674751 gunicorn[48922]:   File "/root/professional_website_v2/backend/venv/lib/python3.12/site-packages/gunicorn/workers/gthread.py", line 281, in handle
+Jan 01 14:31:06 srv674751 gunicorn[48922]:     keepalive = self.handle_request(req, conn)
+Jan 01 14:31:06 srv674751 gunicorn[48922]:                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Jan 01 14:31:06 srv674751 gunicorn[48922]:   File "/root/professional_website_v2/backend/venv/lib/python3.12/site-packages/gunicorn/workers/gthread.py", line 341, in handle_request
+Jan 01 14:31:06 srv674751 gunicorn[48922]:     resp.close()
+Jan 01 14:31:06 srv674751 gunicorn[48922]:   File "/root/professional_website_v2/backend/venv/lib/python3.12/site-packages/gunicorn/http/wsgi.py", line 399, in close
+Jan 01 14:31:06 srv674751 gunicorn[48922]:     self.send_headers()
+Jan 01 14:31:06 srv674751 gunicorn[48922]:   File "/root/professional_website_v2/backend/venv/lib/python3.12/site-packages/gunicorn/http/wsgi.py", line 326, in send_headers
+Jan 01 14:31:06 srv674751 gunicorn[48922]:     tosend = self.default_headers()
+Jan 01 14:31:06 srv674751 gunicorn[48922]:              ^^^^^^^^^^^^^^^^^^^^^^
+Jan 01 14:31:06 srv674751 gunicorn[48922]:   File "/root/professional_website_v2/backend/venv/lib/python3.12/site-packages/gunicorn/http/wsgi.py", line 307, in default_headers
+Jan 01 14:31:06 srv674751 gunicorn[48922]:     elif self.should_close():
+Jan 01 14:31:06 srv674751 gunicorn[48922]:          ^^^^^^^^^^^^^^^^^^^
+Jan 01 14:31:06 srv674751 gunicorn[48922]:   File "/root/professional_website_v2/backend/venv/lib/python3.12/site-packages/gunicorn/http/wsgi.py", line 226, in should_close
+Jan 01 14:31:06 srv674751 gunicorn[48922]:     if self.status_code < 200 or self.status_code in (204, 304):
+Jan 01 14:31:06 srv674751 gunicorn[48922]:        ^^^^^^^^^^^^^^^^
+Jan 01 14:31:06 srv674751 gunicorn[48922]: AttributeError: 'Response' object has no attribute 'status_code'
+Jan 01 14:32:17 srv674751 gunicorn[48922]: server=earl-mcgowen.com//socket.io/ client=127.0.0.1:54240 socket shutdown error: [Errno 9] Bad file descriptor[2026-01-01 14:32:17 +0000] [48922] [ERROR] Error handling request /socket.io/?EIO=4&transport=websocket
+Jan 01 14:32:17 srv674751 gunicorn[48922]: Traceback (most recent call last):
+Jan 01 14:32:17 srv674751 gunicorn[48922]:   File "/root/professional_website_v2/backend/venv/lib/python3.12/site-packages/gunicorn/workers/gthread.py", line 281, in handle
+Jan 01 14:32:17 srv674751 gunicorn[48922]:     keepalive = self.handle_request(req, conn)
+Jan 01 14:32:17 srv674751 gunicorn[48922]:                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Jan 01 14:32:17 srv674751 gunicorn[48922]:   File "/root/professional_website_v2/backend/venv/lib/python3.12/site-packages/gunicorn/workers/gthread.py", line 341, in handle_request
+Jan 01 14:32:17 srv674751 gunicorn[48922]:     resp.close()
+Jan 01 14:32:17 srv674751 gunicorn[48922]:   File "/root/professional_website_v2/backend/venv/lib/python3.12/site-packages/gunicorn/http/wsgi.py", line 399, in close
+Jan 01 14:32:17 srv674751 gunicorn[48922]:     self.send_headers()
+Jan 01 14:32:17 srv674751 gunicorn[48922]:   File "/root/professional_website_v2/backend/venv/lib/python3.12/site-packages/gunicorn/http/wsgi.py", line 326, in send_headers
+Jan 01 14:32:17 srv674751 gunicorn[48922]:     tosend = self.default_headers()
+Jan 01 14:32:17 srv674751 gunicorn[48922]:              ^^^^^^^^^^^^^^^^^^^^^^
+Jan 01 14:32:17 srv674751 gunicorn[48922]:   File "/root/professional_website_v2/backend/venv/lib/python3.12/site-packages/gunicorn/http/wsgi.py", line 307, in default_headers
+Jan 01 14:32:17 srv674751 gunicorn[48922]:     elif self.should_close():
+Jan 01 14:32:17 srv674751 gunicorn[48922]:          ^^^^^^^^^^^^^^^^^^^
+Jan 01 14:32:17 srv674751 gunicorn[48922]:   File "/root/professional_website_v2/backend/venv/lib/python3.12/site-packages/gunicorn/http/wsgi.py", line 226, in should_close
+Jan 01 14:32:17 srv674751 gunicorn[48922]:     if self.status_code < 200 or self.status_code in (204, 304):
+Jan 01 14:32:17 srv674751 gunicorn[48922]:        ^^^^^^^^^^^^^^^^
+Jan 01 14:32:17 srv674751 gunicorn[48922]: AttributeError: 'Response' object has no attribute 'status_code'
+Jan 01 14:34:51 srv674751 systemd[1]: Stopping flask_staging.service - Flask Staging App (Port 5001)...
+Jan 01 14:34:51 srv674751 gunicorn[48921]: [2026-01-01 14:34:51 +0000] [48921] [INFO] Handling signal: term
+Jan 01 14:35:21 srv674751 gunicorn[48921]: [2026-01-01 14:35:21 +0000] [48921] [INFO] Shutting down: Master
+Jan 01 14:35:22 srv674751 systemd[1]: flask_staging.service: Failed to kill control group /system.slice/flask_staging.service, ignoring: Invalid argument
+Jan 01 14:35:22 srv674751 systemd[1]: flask_staging.service: Deactivated successfully.
+Jan 01 14:35:22 srv674751 systemd[1]: Stopped flask_staging.service - Flask Staging App (Port 5001).
+Jan 01 14:35:22 srv674751 systemd[1]: flask_staging.service: Consumed 18.078s CPU time, 229.1M memory peak, 0B memory swap peak.
+Jan 01 14:35:22 srv674751 systemd[1]: Started flask_staging.service - Flask Staging App (Port 5001).
+Jan 01 14:35:22 srv674751 gunicorn[55035]: [2026-01-01 14:35:22 +0000] [55035] [INFO] Starting gunicorn 23.0.0
+Jan 01 14:35:22 srv674751 gunicorn[55035]: [2026-01-01 14:35:22 +0000] [55035] [INFO] Listening at: http://0.0.0.0:5001 (55035)
+Jan 01 14:35:22 srv674751 gunicorn[55035]: [2026-01-01 14:35:22 +0000] [55035] [INFO] Using worker: gthread
+Jan 01 14:35:22 srv674751 gunicorn[55037]: [2026-01-01 14:35:22 +0000] [55037] [INFO] Booting worker with pid: 55037
+Jan 01 14:35:27 srv674751 gunicorn[55035]: [2026-01-01 14:35:27 +0000] [55035] [INFO] Handling signal: term
+Jan 01 14:35:27 srv674751 systemd[1]: Stopping flask_staging.service - Flask Staging App (Port 5001)...
+Jan 01 14:35:57 srv674751 gunicorn[55035]: [2026-01-01 14:35:57 +0000] [55035] [INFO] Shutting down: Master
+Jan 01 14:35:57 srv674751 systemd[1]: flask_staging.service: Deactivated successfully.
+Jan 01 14:35:57 srv674751 systemd[1]: Stopped flask_staging.service - Flask Staging App (Port 5001).
+Jan 01 14:35:57 srv674751 systemd[1]: flask_staging.service: Consumed 1.087s CPU time.
+Jan 01 14:35:57 srv674751 systemd[1]: Started flask_staging.service - Flask Staging App (Port 5001).
+Jan 01 14:35:57 srv674751 gunicorn[55201]: [2026-01-01 14:35:57 +0000] [55201] [INFO] Starting gunicorn 23.0.0
+Jan 01 14:35:57 srv674751 gunicorn[55201]: [2026-01-01 14:35:57 +0000] [55201] [INFO] Listening at: http://0.0.0.0:5001 (55201)
+Jan 01 14:35:57 srv674751 gunicorn[55201]: [2026-01-01 14:35:57 +0000] [55201] [INFO] Using worker: gthread
+Jan 01 14:35:57 srv674751 gunicorn[55202]: [2026-01-01 14:35:57 +0000] [55202] [INFO] Booting worker with pid: 55202
+Jan 01 14:36:16 srv674751 gunicorn[55202]: server=earl-mcgowen.com//socket.io/ client=127.0.0.1:37002 socket shutdown error: [Errno 9] Bad file descriptor[2026-01-01 14:36:16 +0000] [55202] [ERROR] Error handling request /socket.io/?EIO=4&transport=websocket
+Jan 01 14:36:16 srv674751 gunicorn[55202]: Traceback (most recent call last):
+Jan 01 14:36:16 srv674751 gunicorn[55202]:   File "/root/professional_website_v2/backend/venv/lib/python3.12/site-packages/gunicorn/workers/gthread.py", line 281, in handle
+Jan 01 14:36:16 srv674751 gunicorn[55202]:     keepalive = self.handle_request(req, conn)
+Jan 01 14:36:16 srv674751 gunicorn[55202]:                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Jan 01 14:36:16 srv674751 gunicorn[55202]:   File "/root/professional_website_v2/backend/venv/lib/python3.12/site-packages/gunicorn/workers/gthread.py", line 341, in handle_request
+Jan 01 14:36:16 srv674751 gunicorn[55202]:     resp.close()
+Jan 01 14:36:16 srv674751 gunicorn[55202]:   File "/root/professional_website_v2/backend/venv/lib/python3.12/site-packages/gunicorn/http/wsgi.py", line 399, in close
+Jan 01 14:36:16 srv674751 gunicorn[55202]:     self.send_headers()
+Jan 01 14:36:16 srv674751 gunicorn[55202]:   File "/root/professional_website_v2/backend/venv/lib/python3.12/site-packages/gunicorn/http/wsgi.py", line 326, in send_headers
+Jan 01 14:36:16 srv674751 gunicorn[55202]:     tosend = self.default_headers()
+Jan 01 14:36:16 srv674751 gunicorn[55202]:              ^^^^^^^^^^^^^^^^^^^^^^
+Jan 01 14:36:16 srv674751 gunicorn[55202]:   File "/root/professional_website_v2/backend/venv/lib/python3.12/site-packages/gunicorn/http/wsgi.py", line 307, in default_headers
+Jan 01 14:36:16 srv674751 gunicorn[55202]:     elif self.should_close():
+Jan 01 14:36:16 srv674751 gunicorn[55202]:          ^^^^^^^^^^^^^^^^^^^
+Jan 01 14:36:16 srv674751 gunicorn[55202]:   File "/root/professional_website_v2/backend/venv/lib/python3.12/site-packages/gunicorn/http/wsgi.py", line 226, in should_close
+Jan 01 14:36:16 srv674751 gunicorn[55202]:     if self.status_code < 200 or self.status_code in (204, 304):
+Jan 01 14:36:16 srv674751 gunicorn[55202]:        ^^^^^^^^^^^^^^^^
+Jan 01 14:36:16 srv674751 gunicorn[55202]: AttributeError: 'Response' object has no attribute 'status_code'
+Jan 01 14:41:03 srv674751 gunicorn[55202]: server=earl-mcgowen.com//socket.io/ client=127.0.0.1:48708 socket shutdown error: [Errno 9] Bad file descriptor[2026-01-01 14:41:03 +0000] [55202] [ERROR] Error handling request /socket.io/?EIO=4&transport=websocket
+Jan 01 14:41:03 srv674751 gunicorn[55202]: Traceback (most recent call last):
+Jan 01 14:41:03 srv674751 gunicorn[55202]:   File "/root/professional_website_v2/backend/venv/lib/python3.12/site-packages/gunicorn/workers/gthread.py", line 281, in handle
+Jan 01 14:41:03 srv674751 gunicorn[55202]:     keepalive = self.handle_request(req, conn)
+Jan 01 14:41:03 srv674751 gunicorn[55202]:                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Jan 01 14:41:03 srv674751 gunicorn[55202]:   File "/root/professional_website_v2/backend/venv/lib/python3.12/site-packages/gunicorn/workers/gthread.py", line 341, in handle_request
+Jan 01 14:41:03 srv674751 gunicorn[55202]:     resp.close()
+Jan 01 14:41:03 srv674751 gunicorn[55202]:   File "/root/professional_website_v2/backend/venv/lib/python3.12/site-packages/gunicorn/http/wsgi.py", line 399, in close
+Jan 01 14:41:03 srv674751 gunicorn[55202]:     self.send_headers()
+Jan 01 14:41:03 srv674751 gunicorn[55202]:   File "/root/professional_website_v2/backend/venv/lib/python3.12/site-packages/gunicorn/http/wsgi.py", line 326, in send_headers
+Jan 01 14:41:03 srv674751 gunicorn[55202]:     tosend = self.default_headers()
+Jan 01 14:41:03 srv674751 gunicorn[55202]:              ^^^^^^^^^^^^^^^^^^^^^^
+Jan 01 14:41:03 srv674751 gunicorn[55202]:   File "/root/professional_website_v2/backend/venv/lib/python3.12/site-packages/gunicorn/http/wsgi.py", line 307, in default_headers
+Jan 01 14:41:03 srv674751 gunicorn[55202]:     elif self.should_close():
+Jan 01 14:41:03 srv674751 gunicorn[55202]:          ^^^^^^^^^^^^^^^^^^^
+Jan 01 14:41:03 srv674751 gunicorn[55202]:   File "/root/professional_website_v2/backend/venv/lib/python3.12/site-packages/gunicorn/http/wsgi.py", line 226, in should_close
+Jan 01 14:41:03 srv674751 gunicorn[55202]:     if self.status_code < 200 or self.status_code in (204, 304):
+Jan 01 14:41:03 srv674751 gunicorn[55202]:        ^^^^^^^^^^^^^^^^
+Jan 01 14:41:03 srv674751 gunicorn[55202]: AttributeError: 'Response' object has no attribute 'status_code'

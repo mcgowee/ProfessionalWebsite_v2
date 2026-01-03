@@ -1,0 +1,200 @@
+Jan 01 15:22:06 srv674751 gunicorn[59341]:   File "/root/professional_website_v2/backend/venv/lib/python3.12/site-packages/gunicorn/workers/base.py", line 147, in load_wsgi
+Jan 01 15:22:06 srv674751 gunicorn[59341]:     self.wsgi = self.app.wsgi()
+Jan 01 15:22:06 srv674751 gunicorn[59341]:                 ^^^^^^^^^^^^^^^
+Jan 01 15:22:06 srv674751 gunicorn[59341]:   File "/root/professional_website_v2/backend/venv/lib/python3.12/site-packages/gunicorn/app/base.py", line 66, in wsgi
+Jan 01 15:22:06 srv674751 gunicorn[59341]:     self.callable = self.load()
+Jan 01 15:22:06 srv674751 gunicorn[59341]:                     ^^^^^^^^^^^
+Jan 01 15:22:06 srv674751 gunicorn[59341]:   File "/root/professional_website_v2/backend/venv/lib/python3.12/site-packages/gunicorn/app/wsgiapp.py", line 57, in load
+Jan 01 15:22:06 srv674751 gunicorn[59341]:     return self.load_wsgiapp()
+Jan 01 15:22:06 srv674751 gunicorn[59341]:            ^^^^^^^^^^^^^^^^^^^
+Jan 01 15:22:06 srv674751 gunicorn[59341]:   File "/root/professional_website_v2/backend/venv/lib/python3.12/site-packages/gunicorn/app/wsgiapp.py", line 47, in load_wsgiapp
+Jan 01 15:22:06 srv674751 gunicorn[59341]:     return util.import_app(self.app_uri)
+Jan 01 15:22:06 srv674751 gunicorn[59341]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Jan 01 15:22:06 srv674751 gunicorn[59341]:   File "/root/professional_website_v2/backend/venv/lib/python3.12/site-packages/gunicorn/util.py", line 370, in import_app
+Jan 01 15:22:06 srv674751 gunicorn[59341]:     mod = importlib.import_module(module)
+Jan 01 15:22:06 srv674751 gunicorn[59341]:           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Jan 01 15:22:06 srv674751 gunicorn[59341]:   File "/usr/lib/python3.12/importlib/__init__.py", line 90, in import_module
+Jan 01 15:22:06 srv674751 gunicorn[59341]:     return _bootstrap._gcd_import(name[level:], package, level)
+Jan 01 15:22:06 srv674751 gunicorn[59341]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Jan 01 15:22:06 srv674751 gunicorn[59341]:   File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+Jan 01 15:22:06 srv674751 gunicorn[59341]:   File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+Jan 01 15:22:06 srv674751 gunicorn[59341]:   File "<frozen importlib._bootstrap>", line 1324, in _find_and_load_unlocked
+Jan 01 15:22:06 srv674751 gunicorn[59341]: ModuleNotFoundError: No module named 'app'
+Jan 01 15:22:06 srv674751 gunicorn[59341]: [2026-01-01 15:22:06 +0000] [59341] [INFO] Worker exiting (pid: 59341)
+Jan 01 15:22:06 srv674751 gunicorn[59340]: [2026-01-01 15:22:06 +0000] [59340] [ERROR] Worker (pid:59341) exited with code 3
+Jan 01 15:22:06 srv674751 gunicorn[59340]: [2026-01-01 15:22:06 +0000] [59340] [ERROR] Shutting down: Master
+Jan 01 15:22:06 srv674751 gunicorn[59340]: [2026-01-01 15:22:06 +0000] [59340] [ERROR] Reason: Worker failed to boot.
+Jan 01 15:22:06 srv674751 systemd[1]: flask_staging.service: Main process exited, code=exited, status=3/NOTIMPLEMENTED
+Jan 01 15:22:06 srv674751 systemd[1]: flask_staging.service: Failed with result 'exit-code'.
+Jan 01 15:22:06 srv674751 systemd[1]: flask_staging.service: Scheduled restart job, restart counter is at 1.
+Jan 01 15:22:06 srv674751 systemd[1]: Started flask_staging.service - Flask Staging App (Port 5001).
+Jan 01 15:22:06 srv674751 gunicorn[59343]: [2026-01-01 15:22:06 +0000] [59343] [INFO] Starting gunicorn 23.0.0
+Jan 01 15:22:06 srv674751 gunicorn[59343]: [2026-01-01 15:22:06 +0000] [59343] [INFO] Listening at: http://0.0.0.0:5001 (59343)
+Jan 01 15:22:06 srv674751 gunicorn[59343]: [2026-01-01 15:22:06 +0000] [59343] [INFO] Using worker: gevent
+Jan 01 15:22:06 srv674751 gunicorn[59344]: [2026-01-01 15:22:06 +0000] [59344] [INFO] Booting worker with pid: 59344
+Jan 01 15:22:06 srv674751 gunicorn[59344]: [2026-01-01 15:22:06 +0000] [59344] [ERROR] Exception in worker process
+Jan 01 15:22:06 srv674751 gunicorn[59344]: Traceback (most recent call last):
+Jan 01 15:22:06 srv674751 gunicorn[59344]:   File "/root/professional_website_v2/backend/venv/lib/python3.12/site-packages/gunicorn/arbiter.py", line 608, in spawn_worker
+Jan 01 15:22:06 srv674751 gunicorn[59344]:     worker.init_process()
+Jan 01 15:22:06 srv674751 gunicorn[59344]:   File "/root/professional_website_v2/backend/venv/lib/python3.12/site-packages/gunicorn/workers/ggevent.py", line 146, in init_process
+Jan 01 15:22:06 srv674751 gunicorn[59344]:     super().init_process()
+Jan 01 15:22:06 srv674751 gunicorn[59344]:   File "/root/professional_website_v2/backend/venv/lib/python3.12/site-packages/gunicorn/workers/base.py", line 135, in init_process
+Jan 01 15:22:06 srv674751 gunicorn[59344]:     self.load_wsgi()
+Jan 01 15:22:06 srv674751 gunicorn[59344]:   File "/root/professional_website_v2/backend/venv/lib/python3.12/site-packages/gunicorn/workers/base.py", line 147, in load_wsgi
+Jan 01 15:22:06 srv674751 gunicorn[59344]:     self.wsgi = self.app.wsgi()
+Jan 01 15:22:06 srv674751 gunicorn[59344]:                 ^^^^^^^^^^^^^^^
+Jan 01 15:22:06 srv674751 gunicorn[59344]:   File "/root/professional_website_v2/backend/venv/lib/python3.12/site-packages/gunicorn/app/base.py", line 66, in wsgi
+Jan 01 15:22:06 srv674751 gunicorn[59344]:     self.callable = self.load()
+Jan 01 15:22:06 srv674751 gunicorn[59344]:                     ^^^^^^^^^^^
+Jan 01 15:22:06 srv674751 gunicorn[59344]:   File "/root/professional_website_v2/backend/venv/lib/python3.12/site-packages/gunicorn/app/wsgiapp.py", line 57, in load
+Jan 01 15:22:06 srv674751 gunicorn[59344]:     return self.load_wsgiapp()
+Jan 01 15:22:06 srv674751 gunicorn[59344]:            ^^^^^^^^^^^^^^^^^^^
+Jan 01 15:22:06 srv674751 gunicorn[59344]:   File "/root/professional_website_v2/backend/venv/lib/python3.12/site-packages/gunicorn/app/wsgiapp.py", line 47, in load_wsgiapp
+Jan 01 15:22:06 srv674751 gunicorn[59344]:     return util.import_app(self.app_uri)
+Jan 01 15:22:06 srv674751 gunicorn[59344]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Jan 01 15:22:06 srv674751 gunicorn[59344]:   File "/root/professional_website_v2/backend/venv/lib/python3.12/site-packages/gunicorn/util.py", line 370, in import_app
+Jan 01 15:22:06 srv674751 gunicorn[59344]:     mod = importlib.import_module(module)
+Jan 01 15:22:06 srv674751 gunicorn[59344]:           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Jan 01 15:22:06 srv674751 gunicorn[59344]:   File "/usr/lib/python3.12/importlib/__init__.py", line 90, in import_module
+Jan 01 15:22:06 srv674751 gunicorn[59344]:     return _bootstrap._gcd_import(name[level:], package, level)
+Jan 01 15:22:06 srv674751 gunicorn[59344]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Jan 01 15:22:06 srv674751 gunicorn[59344]:   File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+Jan 01 15:22:06 srv674751 gunicorn[59344]:   File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+Jan 01 15:22:06 srv674751 gunicorn[59344]:   File "<frozen importlib._bootstrap>", line 1324, in _find_and_load_unlocked
+Jan 01 15:22:06 srv674751 gunicorn[59344]: ModuleNotFoundError: No module named 'app'
+Jan 01 15:22:06 srv674751 gunicorn[59344]: [2026-01-01 15:22:06 +0000] [59344] [INFO] Worker exiting (pid: 59344)
+Jan 01 15:22:06 srv674751 gunicorn[59343]: [2026-01-01 15:22:06 +0000] [59343] [ERROR] Worker (pid:59344) exited with code 3
+Jan 01 15:22:06 srv674751 gunicorn[59343]: [2026-01-01 15:22:06 +0000] [59343] [ERROR] Shutting down: Master
+Jan 01 15:22:06 srv674751 gunicorn[59343]: [2026-01-01 15:22:06 +0000] [59343] [ERROR] Reason: Worker failed to boot.
+Jan 01 15:22:06 srv674751 systemd[1]: flask_staging.service: Main process exited, code=exited, status=3/NOTIMPLEMENTED
+Jan 01 15:22:06 srv674751 systemd[1]: flask_staging.service: Failed with result 'exit-code'.
+Jan 01 15:22:07 srv674751 systemd[1]: flask_staging.service: Scheduled restart job, restart counter is at 2.
+Jan 01 15:22:07 srv674751 systemd[1]: Started flask_staging.service - Flask Staging App (Port 5001).
+Jan 01 15:22:07 srv674751 gunicorn[59346]: [2026-01-01 15:22:07 +0000] [59346] [INFO] Starting gunicorn 23.0.0
+Jan 01 15:22:07 srv674751 gunicorn[59346]: [2026-01-01 15:22:07 +0000] [59346] [INFO] Listening at: http://0.0.0.0:5001 (59346)
+Jan 01 15:22:07 srv674751 gunicorn[59346]: [2026-01-01 15:22:07 +0000] [59346] [INFO] Using worker: gevent
+Jan 01 15:22:07 srv674751 gunicorn[59347]: [2026-01-01 15:22:07 +0000] [59347] [INFO] Booting worker with pid: 59347
+Jan 01 15:22:07 srv674751 gunicorn[59347]: [2026-01-01 15:22:07 +0000] [59347] [ERROR] Exception in worker process
+Jan 01 15:22:07 srv674751 gunicorn[59347]: Traceback (most recent call last):
+Jan 01 15:22:07 srv674751 gunicorn[59347]:   File "/root/professional_website_v2/backend/venv/lib/python3.12/site-packages/gunicorn/arbiter.py", line 608, in spawn_worker
+Jan 01 15:22:07 srv674751 gunicorn[59347]:     worker.init_process()
+Jan 01 15:22:07 srv674751 gunicorn[59347]:   File "/root/professional_website_v2/backend/venv/lib/python3.12/site-packages/gunicorn/workers/ggevent.py", line 146, in init_process
+Jan 01 15:22:07 srv674751 gunicorn[59347]:     super().init_process()
+Jan 01 15:22:07 srv674751 gunicorn[59347]:   File "/root/professional_website_v2/backend/venv/lib/python3.12/site-packages/gunicorn/workers/base.py", line 135, in init_process
+Jan 01 15:22:07 srv674751 gunicorn[59347]:     self.load_wsgi()
+Jan 01 15:22:07 srv674751 gunicorn[59347]:   File "/root/professional_website_v2/backend/venv/lib/python3.12/site-packages/gunicorn/workers/base.py", line 147, in load_wsgi
+Jan 01 15:22:07 srv674751 gunicorn[59347]:     self.wsgi = self.app.wsgi()
+Jan 01 15:22:07 srv674751 gunicorn[59347]:                 ^^^^^^^^^^^^^^^
+Jan 01 15:22:07 srv674751 gunicorn[59347]:   File "/root/professional_website_v2/backend/venv/lib/python3.12/site-packages/gunicorn/app/base.py", line 66, in wsgi
+Jan 01 15:22:07 srv674751 gunicorn[59347]:     self.callable = self.load()
+Jan 01 15:22:07 srv674751 gunicorn[59347]:                     ^^^^^^^^^^^
+Jan 01 15:22:07 srv674751 gunicorn[59347]:   File "/root/professional_website_v2/backend/venv/lib/python3.12/site-packages/gunicorn/app/wsgiapp.py", line 57, in load
+Jan 01 15:22:07 srv674751 gunicorn[59347]:     return self.load_wsgiapp()
+Jan 01 15:22:07 srv674751 gunicorn[59347]:            ^^^^^^^^^^^^^^^^^^^
+Jan 01 15:22:07 srv674751 gunicorn[59347]:   File "/root/professional_website_v2/backend/venv/lib/python3.12/site-packages/gunicorn/app/wsgiapp.py", line 47, in load_wsgiapp
+Jan 01 15:22:07 srv674751 gunicorn[59347]:     return util.import_app(self.app_uri)
+Jan 01 15:22:07 srv674751 gunicorn[59347]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Jan 01 15:22:07 srv674751 gunicorn[59347]:   File "/root/professional_website_v2/backend/venv/lib/python3.12/site-packages/gunicorn/util.py", line 370, in import_app
+Jan 01 15:22:07 srv674751 gunicorn[59347]:     mod = importlib.import_module(module)
+Jan 01 15:22:07 srv674751 gunicorn[59347]:           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Jan 01 15:22:07 srv674751 gunicorn[59347]:   File "/usr/lib/python3.12/importlib/__init__.py", line 90, in import_module
+Jan 01 15:22:07 srv674751 gunicorn[59347]:     return _bootstrap._gcd_import(name[level:], package, level)
+Jan 01 15:22:07 srv674751 gunicorn[59347]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Jan 01 15:22:07 srv674751 gunicorn[59347]:   File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+Jan 01 15:22:07 srv674751 gunicorn[59347]:   File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+Jan 01 15:22:07 srv674751 gunicorn[59347]:   File "<frozen importlib._bootstrap>", line 1324, in _find_and_load_unlocked
+Jan 01 15:22:07 srv674751 gunicorn[59347]: ModuleNotFoundError: No module named 'app'
+Jan 01 15:22:07 srv674751 gunicorn[59347]: [2026-01-01 15:22:07 +0000] [59347] [INFO] Worker exiting (pid: 59347)
+Jan 01 15:22:07 srv674751 gunicorn[59346]: [2026-01-01 15:22:07 +0000] [59346] [ERROR] Worker (pid:59347) exited with code 3
+Jan 01 15:22:07 srv674751 gunicorn[59346]: [2026-01-01 15:22:07 +0000] [59346] [ERROR] Shutting down: Master
+Jan 01 15:22:07 srv674751 gunicorn[59346]: [2026-01-01 15:22:07 +0000] [59346] [ERROR] Reason: Worker failed to boot.
+Jan 01 15:22:07 srv674751 systemd[1]: flask_staging.service: Main process exited, code=exited, status=3/NOTIMPLEMENTED
+Jan 01 15:22:07 srv674751 systemd[1]: flask_staging.service: Failed with result 'exit-code'.
+Jan 01 15:22:07 srv674751 systemd[1]: flask_staging.service: Scheduled restart job, restart counter is at 3.
+Jan 01 15:22:07 srv674751 systemd[1]: Started flask_staging.service - Flask Staging App (Port 5001).
+Jan 01 15:22:07 srv674751 gunicorn[59350]: [2026-01-01 15:22:07 +0000] [59350] [INFO] Starting gunicorn 23.0.0
+Jan 01 15:22:07 srv674751 gunicorn[59350]: [2026-01-01 15:22:07 +0000] [59350] [INFO] Listening at: http://0.0.0.0:5001 (59350)
+Jan 01 15:22:07 srv674751 gunicorn[59350]: [2026-01-01 15:22:07 +0000] [59350] [INFO] Using worker: gevent
+Jan 01 15:22:07 srv674751 gunicorn[59351]: [2026-01-01 15:22:07 +0000] [59351] [INFO] Booting worker with pid: 59351
+Jan 01 15:22:07 srv674751 gunicorn[59351]: [2026-01-01 15:22:07 +0000] [59351] [ERROR] Exception in worker process
+Jan 01 15:22:07 srv674751 gunicorn[59351]: Traceback (most recent call last):
+Jan 01 15:22:07 srv674751 gunicorn[59351]:   File "/root/professional_website_v2/backend/venv/lib/python3.12/site-packages/gunicorn/arbiter.py", line 608, in spawn_worker
+Jan 01 15:22:07 srv674751 gunicorn[59351]:     worker.init_process()
+Jan 01 15:22:07 srv674751 gunicorn[59351]:   File "/root/professional_website_v2/backend/venv/lib/python3.12/site-packages/gunicorn/workers/ggevent.py", line 146, in init_process
+Jan 01 15:22:07 srv674751 gunicorn[59351]:     super().init_process()
+Jan 01 15:22:07 srv674751 gunicorn[59351]:   File "/root/professional_website_v2/backend/venv/lib/python3.12/site-packages/gunicorn/workers/base.py", line 135, in init_process
+Jan 01 15:22:07 srv674751 gunicorn[59351]:     self.load_wsgi()
+Jan 01 15:22:07 srv674751 gunicorn[59351]:   File "/root/professional_website_v2/backend/venv/lib/python3.12/site-packages/gunicorn/workers/base.py", line 147, in load_wsgi
+Jan 01 15:22:07 srv674751 gunicorn[59351]:     self.wsgi = self.app.wsgi()
+Jan 01 15:22:07 srv674751 gunicorn[59351]:                 ^^^^^^^^^^^^^^^
+Jan 01 15:22:07 srv674751 gunicorn[59351]:   File "/root/professional_website_v2/backend/venv/lib/python3.12/site-packages/gunicorn/app/base.py", line 66, in wsgi
+Jan 01 15:22:07 srv674751 gunicorn[59351]:     self.callable = self.load()
+Jan 01 15:22:07 srv674751 gunicorn[59351]:                     ^^^^^^^^^^^
+Jan 01 15:22:07 srv674751 gunicorn[59351]:   File "/root/professional_website_v2/backend/venv/lib/python3.12/site-packages/gunicorn/app/wsgiapp.py", line 57, in load
+Jan 01 15:22:07 srv674751 gunicorn[59351]:     return self.load_wsgiapp()
+Jan 01 15:22:07 srv674751 gunicorn[59351]:            ^^^^^^^^^^^^^^^^^^^
+Jan 01 15:22:07 srv674751 gunicorn[59351]:   File "/root/professional_website_v2/backend/venv/lib/python3.12/site-packages/gunicorn/app/wsgiapp.py", line 47, in load_wsgiapp
+Jan 01 15:22:07 srv674751 gunicorn[59351]:     return util.import_app(self.app_uri)
+Jan 01 15:22:07 srv674751 gunicorn[59351]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Jan 01 15:22:07 srv674751 gunicorn[59351]:   File "/root/professional_website_v2/backend/venv/lib/python3.12/site-packages/gunicorn/util.py", line 370, in import_app
+Jan 01 15:22:07 srv674751 gunicorn[59351]:     mod = importlib.import_module(module)
+Jan 01 15:22:07 srv674751 gunicorn[59351]:           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Jan 01 15:22:07 srv674751 gunicorn[59351]:   File "/usr/lib/python3.12/importlib/__init__.py", line 90, in import_module
+Jan 01 15:22:07 srv674751 gunicorn[59351]:     return _bootstrap._gcd_import(name[level:], package, level)
+Jan 01 15:22:07 srv674751 gunicorn[59351]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Jan 01 15:22:07 srv674751 gunicorn[59351]:   File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+Jan 01 15:22:07 srv674751 gunicorn[59351]:   File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+Jan 01 15:22:07 srv674751 gunicorn[59351]:   File "<frozen importlib._bootstrap>", line 1324, in _find_and_load_unlocked
+Jan 01 15:22:07 srv674751 gunicorn[59351]: ModuleNotFoundError: No module named 'app'
+Jan 01 15:22:07 srv674751 gunicorn[59351]: [2026-01-01 15:22:07 +0000] [59351] [INFO] Worker exiting (pid: 59351)
+Jan 01 15:22:08 srv674751 gunicorn[59350]: [2026-01-01 15:22:08 +0000] [59350] [ERROR] Worker (pid:59351) exited with code 3
+Jan 01 15:22:08 srv674751 gunicorn[59350]: [2026-01-01 15:22:08 +0000] [59350] [ERROR] Shutting down: Master
+Jan 01 15:22:08 srv674751 gunicorn[59350]: [2026-01-01 15:22:08 +0000] [59350] [ERROR] Reason: Worker failed to boot.
+Jan 01 15:22:08 srv674751 systemd[1]: flask_staging.service: Main process exited, code=exited, status=3/NOTIMPLEMENTED
+Jan 01 15:22:08 srv674751 systemd[1]: flask_staging.service: Failed with result 'exit-code'.
+Jan 01 15:22:08 srv674751 systemd[1]: flask_staging.service: Scheduled restart job, restart counter is at 4.
+Jan 01 15:22:08 srv674751 systemd[1]: Started flask_staging.service - Flask Staging App (Port 5001).
+Jan 01 15:22:08 srv674751 gunicorn[59353]: [2026-01-01 15:22:08 +0000] [59353] [INFO] Starting gunicorn 23.0.0
+Jan 01 15:22:08 srv674751 gunicorn[59353]: [2026-01-01 15:22:08 +0000] [59353] [INFO] Listening at: http://0.0.0.0:5001 (59353)
+Jan 01 15:22:08 srv674751 gunicorn[59353]: [2026-01-01 15:22:08 +0000] [59353] [INFO] Using worker: gevent
+Jan 01 15:22:08 srv674751 gunicorn[59354]: [2026-01-01 15:22:08 +0000] [59354] [INFO] Booting worker with pid: 59354
+Jan 01 15:22:08 srv674751 gunicorn[59354]: [2026-01-01 15:22:08 +0000] [59354] [ERROR] Exception in worker process
+Jan 01 15:22:08 srv674751 gunicorn[59354]: Traceback (most recent call last):
+Jan 01 15:22:08 srv674751 gunicorn[59354]:   File "/root/professional_website_v2/backend/venv/lib/python3.12/site-packages/gunicorn/arbiter.py", line 608, in spawn_worker
+Jan 01 15:22:08 srv674751 gunicorn[59354]:     worker.init_process()
+Jan 01 15:22:08 srv674751 gunicorn[59354]:   File "/root/professional_website_v2/backend/venv/lib/python3.12/site-packages/gunicorn/workers/ggevent.py", line 146, in init_process
+Jan 01 15:22:08 srv674751 gunicorn[59354]:     super().init_process()
+Jan 01 15:22:08 srv674751 gunicorn[59354]:   File "/root/professional_website_v2/backend/venv/lib/python3.12/site-packages/gunicorn/workers/base.py", line 135, in init_process
+Jan 01 15:22:08 srv674751 gunicorn[59354]:     self.load_wsgi()
+Jan 01 15:22:08 srv674751 gunicorn[59354]:   File "/root/professional_website_v2/backend/venv/lib/python3.12/site-packages/gunicorn/workers/base.py", line 147, in load_wsgi
+Jan 01 15:22:08 srv674751 gunicorn[59354]:     self.wsgi = self.app.wsgi()
+Jan 01 15:22:08 srv674751 gunicorn[59354]:                 ^^^^^^^^^^^^^^^
+Jan 01 15:22:08 srv674751 gunicorn[59354]:   File "/root/professional_website_v2/backend/venv/lib/python3.12/site-packages/gunicorn/app/base.py", line 66, in wsgi
+Jan 01 15:22:08 srv674751 gunicorn[59354]:     self.callable = self.load()
+Jan 01 15:22:08 srv674751 gunicorn[59354]:                     ^^^^^^^^^^^
+Jan 01 15:22:08 srv674751 gunicorn[59354]:   File "/root/professional_website_v2/backend/venv/lib/python3.12/site-packages/gunicorn/app/wsgiapp.py", line 57, in load
+Jan 01 15:22:08 srv674751 gunicorn[59354]:     return self.load_wsgiapp()
+Jan 01 15:22:08 srv674751 gunicorn[59354]:            ^^^^^^^^^^^^^^^^^^^
+Jan 01 15:22:08 srv674751 gunicorn[59354]:   File "/root/professional_website_v2/backend/venv/lib/python3.12/site-packages/gunicorn/app/wsgiapp.py", line 47, in load_wsgiapp
+Jan 01 15:22:08 srv674751 gunicorn[59354]:     return util.import_app(self.app_uri)
+Jan 01 15:22:08 srv674751 gunicorn[59354]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Jan 01 15:22:08 srv674751 gunicorn[59354]:   File "/root/professional_website_v2/backend/venv/lib/python3.12/site-packages/gunicorn/util.py", line 370, in import_app
+Jan 01 15:22:08 srv674751 gunicorn[59354]:     mod = importlib.import_module(module)
+Jan 01 15:22:08 srv674751 gunicorn[59354]:           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Jan 01 15:22:08 srv674751 gunicorn[59354]:   File "/usr/lib/python3.12/importlib/__init__.py", line 90, in import_module
+Jan 01 15:22:08 srv674751 gunicorn[59354]:     return _bootstrap._gcd_import(name[level:], package, level)
+Jan 01 15:22:08 srv674751 gunicorn[59354]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Jan 01 15:22:08 srv674751 gunicorn[59354]:   File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+Jan 01 15:22:08 srv674751 gunicorn[59354]:   File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+Jan 01 15:22:08 srv674751 gunicorn[59354]:   File "<frozen importlib._bootstrap>", line 1324, in _find_and_load_unlocked
+Jan 01 15:22:08 srv674751 gunicorn[59354]: ModuleNotFoundError: No module named 'app'
+Jan 01 15:22:08 srv674751 gunicorn[59354]: [2026-01-01 15:22:08 +0000] [59354] [INFO] Worker exiting (pid: 59354)
+Jan 01 15:22:08 srv674751 gunicorn[59353]: [2026-01-01 15:22:08 +0000] [59353] [ERROR] Worker (pid:59354) exited with code 3
+Jan 01 15:22:08 srv674751 gunicorn[59353]: [2026-01-01 15:22:08 +0000] [59353] [ERROR] Shutting down: Master
+Jan 01 15:22:08 srv674751 gunicorn[59353]: [2026-01-01 15:22:08 +0000] [59353] [ERROR] Reason: Worker failed to boot.
+Jan 01 15:22:08 srv674751 systemd[1]: flask_staging.service: Main process exited, code=exited, status=3/NOTIMPLEMENTED
+Jan 01 15:22:08 srv674751 systemd[1]: flask_staging.service: Failed with result 'exit-code'.
+Jan 01 15:22:08 srv674751 systemd[1]: flask_staging.service: Scheduled restart job, restart counter is at 5.
+Jan 01 15:22:08 srv674751 systemd[1]: flask_staging.service: Start request repeated too quickly.
+Jan 01 15:22:08 srv674751 systemd[1]: flask_staging.service: Failed with result 'exit-code'.
+Jan 01 15:22:08 srv674751 systemd[1]: Failed to start flask_staging.service - Flask Staging App (Port 5001).

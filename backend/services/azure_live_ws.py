@@ -111,7 +111,10 @@ class AzureLiveNamespace(Namespace):
         src_bcp47 = _to_bcp47(src_in)
         self._langs[sid] = (_short(src_bcp47), _short(tgt_in))
 
-        auto_flag = self._auto.get(sid, bool((data or {}).get("auto_detect", False)))
+        # DEBUG: Force fixed language to match the working test_azure_stt.py script
+        print(f"[azure-live] DEBUG: FORCING FIXED ENGLISH MODE (Ignoring Auto-Detect)")
+        auto_flag = False
+        src_bcp47 = "en-US"
         self._build_and_start_recognizer(sid, src_bcp47, auto_flag=auto_flag)
         self.emit("started", {"ok": True}, room=sid)
 
@@ -138,14 +141,14 @@ class AzureLiveNamespace(Namespace):
         if not b:
             return
         
-        if len(b) > 0 and (hash(b) % 50 == 0):
-             # Check for silence (simple max byte check for activity)
-             try:
-                 # audioop is removed in Py3.13. Just check if we have non-zero bytes.
-                 max_val = max(b)
-                 print(f"[azure-live] audio_chunk {sid} len={len(b)} max_byte={max_val}") 
-             except Exception as e:
-                 print(f"[azure-live] audio_chunk {sid} len={len(b)} log_err={e}") 
+        if len(b) > 0:
+             # DEBUG: Print EVERY chunk to confirm data arrival
+              try:
+                  # Show first 5 samples (10 bytes) in hex to see if it's all zeros or FFs
+                  hex_preview = b[:10].hex()
+                  print(f"[azure-live] audio_chunk {sid} len={len(b)} hex={hex_preview}", flush=True) 
+              except Exception as e:
+                 print(f"[azure-live] audio_chunk {sid} len={len(b)} log_err={e}", flush=True) 
         
         try:
             stream.write(b)
@@ -179,6 +182,7 @@ class AzureLiveNamespace(Namespace):
             print(f"[azure-live] FINAL from Azure: {evt.result.text}")
             _maybe_emit_detected(evt)
             txt = evt.result.text or ""
+            print(f"[azure-live] EMITTING final_result to {sid}: {txt}", flush=True)
             self.emit("final_result", {"text": txt}, room=sid)
 
             detected = _detected_bcp47_from(evt)
@@ -190,9 +194,19 @@ class AzureLiveNamespace(Namespace):
 
         rec.recognizing.connect(_on_partial)
         rec.recognized.connect(_on_final)
-        rec.canceled.connect(lambda evt: print(f"[azure-live] CANCELED: {evt.result.reason} | {evt.error_details}"))
+        def _on_canceled(evt):
+            print(f"[azure-live] CANCELED: Reason={evt.result.reason if evt.result else 'None'}")
+            print(f"[azure-live] CANCELED: ErrorDetails={evt.error_details}")
+            print(f"[azure-live] CANCELED: ErrorCode={evt.error_code}")
+
+        def _on_stopped(evt):
+             print(f"[azure-live] SESSION STOPPED: {evt}")
+             # Sometimes 'stopped' happens without 'canceled' if it's just 'SpeechEndDetected'? 
+             # But continuous shouldn't stop for silence unless configured.
+        
+        rec.canceled.connect(_on_canceled)
         rec.session_started.connect(lambda evt: print(f"[azure-live] SESSION STARTED {evt}"))
-        rec.session_stopped.connect(lambda evt: print(f"[azure-live] SESSION STOPPED {evt}"))
+        rec.session_stopped.connect(_on_stopped)
 
     def _build_and_start_recognizer(self, sid, src_bcp47: str, auto_flag: bool):
         self._stop_session(sid, remove=False)
@@ -225,8 +239,10 @@ class AzureLiveNamespace(Namespace):
         self._recs[sid] = rec
 
         print(f"[azure-live] starting continuous recognition async...")
-        rec.start_continuous_recognition_async().get()
-        print(f"[azure-live] started recognition successfully")
+        # CRITICAL FIX: Do NOT call .get() here. It blocks the eventlet green thread
+        # while waiting for the Azure C-thread, causing a deadlock/silence.
+        rec.start_continuous_recognition_async() 
+        print(f"[azure-live] started recognition successfully (async)")
 
     def _stop_session(self, sid, remove=False):
         stream = self._streams.get(sid)
@@ -236,7 +252,7 @@ class AzureLiveNamespace(Namespace):
         except Exception:
             pass
         try:
-            if rec: rec.stop_continuous_recognition_async().get()
+            if rec: rec.stop_continuous_recognition_async() # CRITICAL FIX: No .get()
         except Exception:
             pass
 

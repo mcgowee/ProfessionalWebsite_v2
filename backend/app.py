@@ -1,6 +1,10 @@
-import eventlet
-# Crucial: Patch socket for Flask-SocketIO, but skip thread for Azure SDK
-eventlet.monkey_patch(thread=False, socket=True)
+try:
+    import eventlet
+    # Crucial: Patch socket for Flask-SocketIO, monkey_patch if eventlet is present
+    eventlet.monkey_patch(thread=False, socket=True)
+except ImportError:
+    # If eventlet is not installed, we might be running with gevent or standard threads
+    pass
 
 from flask import Flask, request, jsonify
 from flask_cors import CORS
@@ -37,7 +41,7 @@ socketio = SocketIO(
     cors_allowed_origins="*",
     logger=False,
     engineio_logger=False,
-    # async_mode='eventlet' is default if installed, which is what we want
+    # async_mode='eventlet' is default if installed, otherwise it will detect gevent/threading
 )
 
 # If you want to keep your old commented CORS allowlist, it's fine to keep it commented:
@@ -274,4 +278,4 @@ except Exception as e:
 # For local dev only. In production you run gunicorn via systemd (as you already do).
 if __name__ == "__main__":
     # If you ever run directly, use socketio.run so /socket.io works
-    socketio.run(app, host="127.0.0.1", port=5000, debug=True)
+    socketio.run(app, host="0.0.0.0", port=5001, debug=True)

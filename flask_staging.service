@@ -1,0 +1,13 @@
+[Unit]
+Description=Flask Staging App (Port 5001)
+After=network.target
+
+[Service]
+User=root
+WorkingDirectory=/var/www/professional_website_v2_staging/backend
+Environment="PATH=/var/www/professional_website_v2_staging/backend/venv/bin"
+ExecStart=/var/www/professional_website_v2_staging/backend/venv/bin/gunicorn --workers 1 --worker-class eventlet --bind 0.0.0.0:5001 app:app
+Restart=always
+
+[Install]
+WantedBy=multi-user.target
